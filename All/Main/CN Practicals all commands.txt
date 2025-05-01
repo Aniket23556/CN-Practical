@@ -1,0 +1,88 @@
+﻿Practical 1:
+Basic Network Commands and Network configuration commands -
+* Ipconfig
+* Ping <ip address of other pc>
+* Tracert <ip address of other pc>
+
+
+Practical 5:
+Switch Configuration -
+Switch > CLI :
+* en (To enable the switch)
+* Conf t (To configure the terminal)
+* hostname <Name>
+* interface vlan1
+* ip address 10.0.0.1 255.0.0.0
+* No shut
+* exit
+* exit
+* exit
+Do same for Second Switch - Just change the ip address to 10.0.0.2
+
+
+Practical 6:
+Router Configuration -
+PC > Terminal :
+* en
+* config t
+* hostname <name>
+* banner motd $<Type a message here>$
+* service password-encryption
+* enable password <your password>
+* enable secret <your password>
+* Line console 0
+* password <Your password>
+* login
+* exit
+* exit
+* Enter your passwords to login
+* config t
+* Copy run start
+
+
+
+
+Practical 8:
+Router connection between devices -
+Router > CLI
+* no
+* en
+* config t
+* interface g0/0/0
+* ip address 192.168.1.1 255.255.255.0
+* No shutdown
+* exit
+* interface g0/0/1
+* ip address 192.168.2.1 255.255.255.0
+* No shutdown
+* exit
+* exit
+
+
+
+
+Practical 9:
+Telnet Connection -
+Ip address of PC and Laptop
+Switch > CLI
+* en
+* config t
+* interface vlan1
+* ip address 192.168.1.1 255.255.255.0
+* no shutdown
+* exit
+* exit
+* enable
+* config t
+* line vty 0 4
+* Login local
+* User abc password cisco
+* exit
+* enable password cisco1
+* exit
+* exit
+* exit
+
+
+PC > console
+* telnet 192.168.1.1
